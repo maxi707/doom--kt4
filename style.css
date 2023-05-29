@@ -1,0 +1,207 @@
+body {
+  position: relative;
+  display: flex;
+  margin: 0;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.button {
+  padding: 5px 20px;
+  font-size: inherit;
+}
+
+.modal {
+  position: absolute;
+  z-index: 10;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal--shown {
+  display: flex;
+}
+
+.modal__panel {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 0 6px 2px rgba(255, 255, 255, 0.3);
+}
+
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  width: 940px;
+  margin: 0 auto;
+  padding: 50px 0;
+  gap: 50px;
+}
+
+.wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: start;
+  align-items: center;
+  gap: 30px;
+}
+
+.form {
+  display: flex;
+  flex-grow: 1;
+  flex-flow: column nowrap;
+  gap: 15px;
+}
+
+.form__item {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0;
+  gap: 15px;
+}
+
+.form__wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 5px;
+}
+
+.form__label {
+  min-width: 225px;
+}
+
+.form__field {
+  flex-grow: 1;
+  box-sizing: border-box;
+  padding: 5px 10px;
+  font-size: inherit;
+}
+
+.form__field--date {
+  flex-grow: 0;
+  width: 45px;
+  text-align: center;
+}
+
+.card {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  min-width: 373px;
+  height: 210px;
+  padding: 15px;
+  font-weight: bold;
+  font-size: 16px;
+  font-family: "Courier New", Courier, monospace;
+  border: 3px solid black;
+  border-radius: 15px;
+  box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card__bank {
+  box-sizing: border-box;
+  height: 40px;
+  object-fit: contain;
+}
+
+.card__bank-logo {
+  display: block;
+  height: 100%;
+}
+
+.card__number-wrapper {
+  position: relative;
+}
+
+.card__number {
+  position: absolute;
+  z-index: 2;
+  margin: 0;
+  font-size: 29px;
+  text-align: left;
+  background-color: white;
+}
+
+.card__number--placeholder {
+  position: relative;
+  z-index: 1;
+  color: lightgrey;
+}
+
+.card__wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.card__name {
+  margin: 0 15px 0 0;
+}
+
+.card__date {
+  position: relative;
+  margin: 0 10px 0 auto;
+}
+
+.card__date--placeholder {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  color: lightgrey;
+}
+
+.card__date-wrapper {
+  position: relative;
+}
+
+.card__month,
+.card__year {
+  position: absolute;
+  right: 0;
+  z-index: 2;
+  background-color: white;
+}
+
+.card__system {
+  box-sizing: border-box;
+  width: 60px;
+  min-width: 60px;
+  height: 30px;
+}
+
+.card__system-logo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.card-info {
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+
+.blank {
+  color: lightgrey;
+}
+
+th,
+td {
+  padding: 5px;
+  text-align: center;
+  border: 1px solid black;
+}

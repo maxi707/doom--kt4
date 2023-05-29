@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Банковская карточка</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <form id="iForm" class="form">
+          <p class="form__item">
+            <label class="form__label" for="iBank"> Название банка</label>
+            <select class="form__field" id="iBank">
+              <option value="bank-blank" selected disabled>Не выбрано</option>
+              <option value="СберБанк">СберБанк</option>
+              <option value="ВТБ">ВТБ</option>
+              <option value="Альфа-Банк">Альфа-Банк</option>
+              <option value="Россельхозбанк">Россельхозбанк</option>
+              <option value="Тинькофф">Тинькофф</option>
+            </select>
+          </p>
+          <p class="form__item">
+            <label class="form__label" for="iSystem"> Тип платежной системы </label>
+            <select class="form__field" id="iSystem">
+              <option value="system-blank" selected disabled>Не выбран</option>
+              <option value="VISA">VISA</option>
+              <option value="Maestro">Maestro</option>
+              <option value="Mastercard">Mastercard</option>
+              <option value="МИР">МИР</option>
+            </select>
+          </p>
+          <p class="form__item">
+            <label class="form__label" for="iNumber">Номер карты </label>
+            <input id="iNumber" class="form__field" type="text" maxlength="16" placeholder="0000000000000000">
+          </p>
+          <p class="form__item"><label class="form__label" for="iName">Имя держателя карты </label> <input id="iName" class="form__field" type="text" maxlength="21" placeholder="IVANOV IVAN" data-placeholder="IVANOV IVAN"></p>
+
+          <div class="form__item">
+            <label class="form__label">Месяц и год окончания карты </label>
+            <div class="form__wrapper"><input id="iMonth" class="form__field form__field--date" type="text" placeholder="00" maxlength="2">/<input id="iYear" class="form__field form__field--date" type="text" placeholder="00" maxlength="2"></div>
+          </div>
+
+          <input class="button" type="submit">
+        </form>
+        <div class="card">
+          <div class="card__bank">
+            <img class="card__bank-logo" src="img/bank_blank.png" alt="Не выбрано">
+          </div>
+          <div class="card__number-wrapper">
+            <p class="card__number"></p>
+            <p class="card__number card__number--placeholder">0000 0000 0000 0000</p>
+          </div>
+          <div class="card__wrapper">
+            <p class="card__name blank">IVANOV IVAN</p>
+            <div class="card__date">
+              <span class="card__date-wrapper"><span class="card__month"></span><span class="card__date--placeholder">00</span></span
+              ><span class="card__date-wrapper">/<span class="card__year"></span><span class="card__date--placeholder">00</span></span>
+            </div>
+            <div class="card__system">
+              <img class="card__system-logo" src="img/system_blank.png" alt="Не выбрано">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <table class="card-info">
+        <tr>
+          <th>Банк</th>
+          <th>
+            Платежная<br>
+            система
+          </th>
+          <th>Номер карты</th>
+          <th>Имя</th>
+          <th>
+            Месяц и год<br>
+            окончания
+          </th>
+        </tr>
+      </table>
+    </div>
+
+    <div class="modal">
+      <div class="modal__panel">
+        <p class="modal__message">Проверьте правильность заполнения полей!</p>
+        <button id="iModalClose" class="button">Закрыть</button>
+      </div>
+    </div>
+
+    <script src="js/modal.js"></script>
+    <script src="js/card.js"></script>
+  </body>
+</html>
